@@ -1,0 +1,32 @@
+记录比较好的文章或网址
+
+输入框三种输入方式（selenium webdriver 干货）：https://www.cnblogs.com/MUMO/p/5924410.html
+
+issue:
+1,clear()没有体现效果怎么办
+from selenium.webdriver.common.keys import Keys
+self.driver.find_element_by_xpath(virtualroomtype_element.virtual_roomtype_name).send_keys(Keys.CONTROL + "a")
+self.driver.find_element_by_xpath(virtualroomtype_element.virtual_roomtype_name).send_keys(Keys.DELETE)
+self.driver.find_element_by_xpath(virtualroomtype_element.virtual_roomtype_name).clear()
+如果还是运行不成功，便考虑将文本text值设置为''；用js设置元素的value：js.executeScript("document.getElementById('id').value ='text';");
+---改了哪些模块：损物赔偿
+
+2,会员预订无法输入会员名
+
+3,加上运行失败继续自动运行
+@pytest.mark.flaky(reruns=3)
+
+4,租借物品新增出现名称只输入了一半(损物类型新增只输入一半,send_keys输入不全)
+将输入步骤后面加了睡眠时间1s，还是存在输入不全的情况。
+
+5,房型的启用禁用功能调试了很久
+    禁用断言的等待时间，在断言之前加等待时间；
+
+6,鼠标悬浮时，隐藏的菜单按钮点击不到
+借用浏览器上的右键元素，勾选断点；设置好断点后，界面可以停留再悬浮的状态下，就可以定位元素了；
+
+7,单位新增每次运行之前需要修改新增和修改的单位名；
+
+
+
+
